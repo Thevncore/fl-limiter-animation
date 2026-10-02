@@ -1,0 +1,14 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>FL Limiter idle animation</title>
+<body style="margin:0;background:#222;color:#ccc;font:13px sans-serif">
+<div style="padding:16px">
+  <canvas id="c" style="display:block;max-width:100%"></canvas>
+  <p>Scrolling speed <input id="s" type="range" min="0" max="100" value="50"> <span id="sv">50</span></p>
+</div>
+<script src="idle_anim.js"></script>
+<script>
+  const a = new FLIdle.FLIdleAnim(document.getElementById('c'));
+  a.start();
+  s.oninput = () => { a.slider = +s.value; sv.textContent = s.value; };
+</script>
